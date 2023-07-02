@@ -1,0 +1,42 @@
+@import url(./_var.css);
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@1&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* SETUP */
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+main{
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 40rem;
+    height: 60rem;
+    min-width: 400px;
+    min-height: 600px;
+    color: var(--text);
+}
+
+/* CARD */
+
+section{
+    height: calc(100% - 8.33%);
+    background: var(--background);
+}
+section h1{
+
+/* SOCIALS */
+
+}
+footer{
+    height: 8.33%;
+    background: #fff;
+}
