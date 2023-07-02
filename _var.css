@@ -6,9 +6,7 @@ body{
     height: 100vh;
     overflow: hidden;
     /* GRADIENT */
-    background: #D3CCE3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: var(--white-soft);
 }
 
 /*  */
@@ -29,13 +27,6 @@ body{
 
 @media (prefers-color-scheme: dark) {
     body{
-        background: #485563;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #29323c, #485563);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to left, #29323c, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    }
-
-    :root{
-        --background: var(--black);
-        --text: var(--white-soft);
+        background: #26262c; 
     }
 }

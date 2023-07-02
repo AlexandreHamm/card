@@ -1,10 +1,17 @@
 @import url(./_var.css);
-@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@font-face {
+    font-family: 'Akira Expanded';
+    src: url(./Akira\ Expanded.otf);
+}
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
 }
 
 /* SETUP */
@@ -12,31 +19,135 @@
 body{
     height: 100vh;
     overflow: hidden;
-    font-family: 'Ysabeau SC', sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 main{
     position: absolute;
     inset: 0;
     margin: auto;
-    width: 40rem;
-    height: 60rem;
-    min-width: 400px;
-    min-height: 600px;
+    width: 320px;
+    height: 600px;
     color: var(--text);
+    border-radius: 10px;
+    background: var(--background);
+    box-shadow: 0 0 10px #00000030;
+    overflow: hidden;
 }
 
 /* CARD */
 
 section{
-    height: calc(100% - 8.33%);
-    background: var(--background);
+    height: 80%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section div:first-child{
+    width: 100%;
+    height: 75%;
+    background-image: url('https://w0.peakpx.com/wallpaper/1017/265/HD-wallpaper-abstract-trippy-psychedelic-thumbnail.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .9;
+    border-radius: 5px;
 }
 section h1{
+    font-size: 65px;
+    text-align: center;
+    font-family: 'Akira Expanded';
+    pointer-events: none;
+}
+section a{
+    width: 97%;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    background: var(--text);
+    color: var(--background);
+    letter-spacing: 5px;
+    transition: letter-spacing .2s;
+}
+section a:hover{
+    letter-spacing: 10px;
+    transition: letter-spacing .2s;
+}
 
 /* SOCIALS */
 
-}
 footer{
-    height: 8.33%;
-    background: #fff;
+    position: relative;
+    height: 20%;
+    border-top: 2px dashed currentColor;
+    display: flex;
+    justify-content: space-between;
+}
+footer nav{
+    width: 62%;
+    height: 100%;
+    padding-left: 5px;
+    padding-bottom: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+footer span{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: currentColor;
+    float: left;
+    margin-right: 7px;
+}
+footer div{
+    width: 100%;
+    height: calc(100% - 40px);
+    padding-block: 12px 5px;
+    padding-left: 11px;
+    text-transform: uppercase;
+    /* background: currentColor; */
+}
+footer h2, footer p{
+    font-size: 13px;
+}
+footer p{
+    margin-top: 5px;
+    padding-right: 5px;
+    text-transform: none;
+    line-height: 20px;
+}
+footer a{
+    height: 40px;
+    aspect-ratio: 1/1;
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .2s ease-in-out;
+}
+footer nav a:hover{
+    transform: translateY(-10px);
+    transition: transform .2s ease-in-out;
+}
+footer a:first-child svg{
+    margin-top: -.4rem;
+}
+footer > a{
+    height: 100%;
+}
+footer img{
+    height: 100%;
+    opacity: .8;
+}
+
+@keyframes enlarge {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
 }
